@@ -41,18 +41,18 @@ public class CarritoDeMercado {
 
     }
     public boolean sacar(String nombre){
-        for (Producto recorrerProductos:productos) {
-            if (recorrerProductos != null){
-                productos -
-
-
-        }
+        Producto productoSacar = buscar(nombre);
+        if(productoSacar !=null){
+            this.productos.remove(productoSacar);
+            return true;
 
         }
         return false;
 
     }
     public  int calcularValorTotal(){
+        Producto calcularSuma = 
+
 
     }
     public  Producto obtenerProductoMasCaro(){
