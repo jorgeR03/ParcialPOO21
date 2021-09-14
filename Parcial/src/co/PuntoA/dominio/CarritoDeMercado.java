@@ -9,14 +9,17 @@ public class CarritoDeMercado {
 
     public boolean  agregar(Producto p){
         if(p != null){
-            productos.add(p);
-            return true;
+            if (this.productos.size()<CAPACIDAD_MAXIMA){
+               productos.add(p);
+                return true;
+            }
+
         }return false;
 
     }
     public Producto buscar(String nombre){
         Producto productoABuscar = null;
-        for (Producto recorrerProductos:productos) {
+        for (Producto recorrerProductos:this.productos) {
             if (recorrerProductos.getNombre().equalsIgnoreCase(nombre)){
                 productoABuscar = recorrerProductos;
                 break;
@@ -51,7 +54,11 @@ public class CarritoDeMercado {
 
     }
     public  int calcularValorTotal(){
-        Producto calcularSuma = 
+        int valorTotal = 0;
+        for (int i=0 < productos.size();i++){
+            valorTotal=productos.get(i).getPrecio()+valorTotal
+        }
+
 
 
     }

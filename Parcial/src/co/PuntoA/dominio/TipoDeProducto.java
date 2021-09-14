@@ -1,7 +1,7 @@
 package co.PuntoA.dominio;
 
 public class TipoDeProducto {
-    public String Carne;
+    public static final String Carne;
     public String verduras;
     public String lacteo;
     public String fruta;
